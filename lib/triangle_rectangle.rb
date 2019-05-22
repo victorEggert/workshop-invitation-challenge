@@ -4,13 +4,15 @@ class TriangleRectangle < GeometricBase
   attr_writer :height, :base
 
   def initialize(base, height)
+    @height = height
+    @base = base
   end
 
   def area
-    0
+    divide(multiply(@height, @base), 2)
   end
 
   def perimeter
-    0
+    sum(radiciation(sum(exponentiation(@height, 2), exponentiation(@base, 2)), 2), sum(@height, @base))
   end
 end
